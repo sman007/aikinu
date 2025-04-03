@@ -2,50 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us - Aikinu</title>
-  <link rel="stylesheet" href="css/aikinu.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Aikinu</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-  <header>
-    <img src="images/ak2.png" alt="Aikinu Logo" width="120" />
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a> |
-      <a href="contact.html">Contact</a>
-    </nav>
+<body class="bg-white text-gray-800">
+  <!-- Header -->
+  <header class="bg-white shadow">
+    <div class="container mx-auto flex items-center justify-between px-6 py-4">
+      <img src="images/ak2.png" alt="Aikinu Logo" class="h-12">
+      <nav class="space-x-6 text-sm font-semibold">
+        <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
+        <a href="about.html" class="text-gray-700 hover:text-blue-600">About</a>
+        <a href="contact.html" class="text-gray-700 hover:text-blue-600">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h1>Contact Us</h1>
-    <p>We’d love to hear from you. Please reach out using the details below:</p>
+  <!-- Contact Section -->
+  <main class="container mx-auto px-6 py-16">
+    <h1 class="text-4xl font-bold text-center mb-10">Contact Us</h1>
 
-    <section>
-      <h2>Address</h2>
-      <p>
-        Aikinu LLC<br>
-        16192 Coastal Highway<br>
-        Lewes, DE 19958
-      </p>
-    </section>
+    <div class="max-w-xl mx-auto text-lg space-y-6">
+      <p>If you'd like to learn more about how Aikinu can help you build your workforce or find your next great role, reach out to us:</p>
 
-    <section>
-      <h2>Email</h2>
-      <p>
-        <a href="mailto:info@aikinu.com">info@aikinu.com</a>
-      </p>
-    </section>
+      <div>
+        <h2 class="text-xl font-semibold">Address</h2>
+        <p>
+          Aikinu LLC<br>
+          16192 Coastal Highway<br>
+          Lewes, DE 19958
+        </p>
+      </div>
 
-    <section>
-      <h2>Phone</h2>
-      <p>
-        +1.646.494.8500
-      </p>
-    </section>
+      <div>
+        <h2 class="text-xl font-semibold">Email</h2>
+        <p><a href="mailto:info@aikinu.com" class="text-blue-600 hover:underline">info@aikinu.com</a></p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-semibold">Phone</h2>
+        <p>+1.646.494.8500</p>
+      </div>
+    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Aikinu. All rights reserved.</p>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6 text-center text-sm">
+    <p>&copy; 2025 Aikinu LLC. All rights reserved.</p>
   </footer>
 </body>
 </html>

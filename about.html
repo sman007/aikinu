@@ -4,40 +4,55 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us - Aikinu</title>
-  <link rel="stylesheet" href="css/aikinu.css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-  <header>
-    <img src="images/ak2.png" alt="Aikinu Logo" width="120" />
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a> |
-      <a href="contact.html">Contact</a>
-    </nav>
+<body class="bg-white text-gray-800">
+  <!-- Header -->
+  <header class="bg-white shadow">
+    <div class="container mx-auto flex items-center justify-between px-6 py-4">
+      <img src="images/ak2.png" alt="Aikinu Logo" class="h-12">
+      <nav class="space-x-6 text-sm font-semibold">
+        <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
+        <a href="about.html" class="text-gray-700 hover:text-blue-600">About</a>
+        <a href="contact.html" class="text-gray-700 hover:text-blue-600">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h1>About Us</h1>
-    <p>
-      Welcome to Aikinu, your trusted partner for technology recruitment and staff augmentation services. We are dedicated to connecting businesses with top-tier tech talent, ensuring a perfect fit for both parties. Our team of industry experts has years of experience in technology recruitment, providing tailored solutions to meet the unique needs of our clients.
-    </p>
+  <!-- About Section -->
+  <main class="container mx-auto px-6 py-16">
+    <h1 class="text-4xl font-bold text-center mb-10">About Aikinu</h1>
 
-    <h2>Our Mission</h2>
-    <p>
-      Aikinu was founded in 2017 with a simple mission: to bridge the gap between technology-driven businesses and the talented professionals they need to succeed.
-    </p>
+    <div class="max-w-3xl mx-auto text-lg space-y-6">
+      <p>
+        Founded in 2017, Aikinu is a results-driven technology recruitment and staff augmentation partner.
+        We specialize in connecting high-caliber tech professionals with companies that value impact and innovation.
+      </p>
 
-    <h2>Why Choose Aikinu?</h2>
-    <ul>
-      <li>Tailored recruitment solutions</li>
-      <li>Access to an extensive network of skilled professionals across the Americas</li>
-      <li>In-depth industry knowledge and expertise</li>
-      <li>Unmatched client satisfaction</li>
-    </ul>
+      <p>
+        Our mission is to bridge the gap between technology-driven businesses and the skilled professionals they need to succeed.
+        We take a relationship-first approach, ensuring cultural alignment and long-term success for both our clients and candidates.
+      </p>
+
+      <p>
+        With a team of experienced recruiters and a commitment to client satisfaction, Aikinu delivers tailored hiring solutions
+        that help organizations grow stronger and smarter.
+      </p>
+
+      <ul class="list-disc list-inside">
+        <li>Custom staffing strategies</li>
+        <li>Enterprise-level hiring solutions</li>
+        <li>Nationwide and remote-ready capabilities</li>
+        <li>Dedicated support and long-term partnerships</li>
+      </ul>
+
+      <img src="images/Depositphotos_279405210_DS.jpg" alt="Recruitment Process" class="rounded-lg shadow-lg mt-8">
+    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Aikinu. All rights reserved.</p>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6 text-center text-sm">
+    <p>&copy; 2025 Aikinu LLC. All rights reserved.</p>
   </footer>
 </body>
 </html>

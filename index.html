@@ -1,26 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Aikinu</title>
-  <link rel="stylesheet" href="css/aikinu.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aikinu - Workforce Solutions. Delivered.</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-white text-gray-800">
+  <!-- Header -->
+  <header class="bg-white shadow">
+    <div class="container mx-auto flex items-center justify-between px-6 py-4">
+      <img src="images/ak2.png" alt="Aikinu Logo" class="h-12">
+      <nav class="space-x-6 text-sm font-semibold">
+        <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
+        <a href="about.html" class="text-gray-700 hover:text-blue-600">About</a>
+        <a href="contact.html" class="text-gray-700 hover:text-blue-600">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<header>
-  <img src="ak2.png" alt="Aikinu Logo">
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+  <!-- Hero Section -->
+  <section class="bg-gray-100 py-20 text-center">
+    <div class="container mx-auto px-6">
+      <h1 class="text-4xl font-bold mb-4">Workforce Solutions. Delivered.</h1>
+      <p class="text-lg max-w-2xl mx-auto">We help you hire the right people, right now. Proven solutions. Expert delivery. Real results.</p>
+    </div>
+  </section>
 
-<main>
-  <h1>We help match top employers with amazing people</h1>
-  <img src="Depositphotos_33030957_DS.jpg" alt="Team Meeting">
-  <p>Aikinu is where talent meets opportunity. We provide recruiting services that help companies and candidates find the perfect match.</p>
-</main>
+  <!-- Services / Features Section -->
+  <section class="py-16">
+    <div class="container mx-auto px-6">
+      <h2 class="text-2xl font-bold text-center mb-10">Why Aikinu?</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <img src="images/Depositphotos_254316914_DS.jpg" alt="Team" class="rounded-lg shadow mb-4">
+          <h3 class="font-semibold text-lg">Custom Staffing Solutions</h3>
+          <p class="text-sm text-gray-600">Tailored hiring strategies to match your company culture and goals.</p>
+        </div>
+        <div class="text-center">
+          <img src="images/Depositphotos_33030957_DS.jpg" alt="Success" class="rounded-lg shadow mb-4">
+          <h3 class="font-semibold text-lg">Enterprise Experience</h3>
+          <p class="text-sm text-gray-600">Trusted by leading firms across North America to deliver top talent.</p>
+        </div>
+        <div class="text-center">
+          <img src="images/Depositphotos_254319724_DS.jpg" alt="Handshake" class="rounded-lg shadow mb-4">
+          <h3 class="font-semibold text-lg">Long-Term Partnerships</h3>
+          <p class="text-sm text-gray-600">We build relationships, not transactions. Let’s grow together.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- CTA Section -->
+  <section class="bg-blue-600 text-white py-12 text-center">
+    <h2 class="text-2xl font-bold">Let’s find your next great hire</h2>
+    <p class="text-sm mt-2">Contact us to get started on building your dream team.</p>
+    <a href="contact.html" class="inline-block mt-4 px-6 py-2 bg-white text-blue-600 font-semibold rounded hover:bg-gray-200">Get in Touch</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6 text-center text-sm">
+    <p>&copy; 2025 Aikinu LLC. All rights reserved.</p>
+  </footer>
 </body>
 </html>
