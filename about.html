@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn about Aikinu, your trusted tech recruitment and staff augmentation partner." />
   <title>Aikinu - About Us</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
@@ -10,12 +11,17 @@
   <!-- Header -->
   <header class="bg-white shadow">
     <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between">
-      <div class="mb-4 md:mb-0 flex justify-center md:justify-start w-full md:w-auto">
+      <div class="flex items-center justify-between w-full md:w-auto">
         <a href="index.html">
-          <img src="images/ak2.png" alt="Aikinu Logo" class="h-20 md:h-24 bg-white p-2">
+          <img src="images/ak2.png" alt="Aikinu Logo" class="h-20 md:h-24 bg-white p-2" loading="lazy">
         </a>
+        <button id="menu-toggle" class="md:hidden text-blue-900 focus:outline-none">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
       </div>
-      <nav class="w-full md:w-auto text-center">
+      <nav id="nav-menu" class="w-full md:w-auto text-center hidden md:block mt-4 md:mt-0">
         <ul class="flex flex-col md:flex-row md:space-x-6 text-base font-semibold">
           <li><a href="index.html" class="text-blue-900 hover:text-orange-500 py-2 inline-block">Home</a></li>
           <li><a href="about.html" class="text-blue-900 hover:text-orange-500 py-2 inline-block">About Us</a></li>
@@ -33,20 +39,20 @@
   </header>
 
   <!-- About Page Content -->
-  <section class="px-6 md:px-12 py-16 max-w-6xl mx-auto">
-    <h1 class="text-4xl font-bold text-blue-900 mb-6">About Aikinu</h1>
-    <p class="text-gray-700 mb-4 leading-loose">Welcome to Aikinu, your trusted partner for technology recruitment and staff augmentation services. We are dedicated to connecting businesses with top-tier tech talent, ensuring a perfect fit for both parties.</p>
-
-    <p class="text-gray-700 mb-4 leading-loose">At Aikinu, we go beyond simply filling roles. We believe in building lasting partnerships by understanding the unique needs of both our clients and candidates. Our team of experienced recruiters and industry experts are committed to delivering personalized solutions that drive success.</p>
-
-    <p class="text-gray-700 mb-4 leading-loose">Whether you're a startup looking to scale or an established enterprise seeking niche expertise, Aikinu has the resources and insights to help you thrive in a rapidly evolving tech landscape. Join the many organizations that have trusted Aikinu to power their growth with exceptional talent.</p>
-  </section>
+  <main>
+    <section class="px-6 md:px-12 py-16 max-w-6xl mx-auto">
+      <h1 class="text-4xl font-bold text-blue-900 mb-6">About Aikinu</h1>
+      <p class="text-gray-700 mb-4 leading-loose">Welcome to Aikinu, your trusted partner for technology recruitment and staff augmentation services. We are dedicated to connecting businesses with top-tier tech talent, ensuring a perfect fit for both parties.</p>
+      <p class="text-gray-700 mb-4 leading-loose">At Aikinu, we go beyond simply filling roles. We believe in building lasting partnerships by understanding the unique needs of both our clients and candidates. Our team of experienced recruiters and industry experts are committed to delivering personalized solutions that drive success.</p>
+      <p class="text-gray-700 mb-4 leading-loose">Whether you're a startup looking to scale or an established enterprise seeking niche expertise, Aikinu has the resources and insights to help you thrive in a rapidly evolving tech landscape. Join the many organizations that have trusted Aikinu to power their growth with exceptional talent.</p>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer class="bg-gray-900 text-white py-10">
     <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-6 text-sm">
       <div>
-        <img src="images/ak2.png" alt="Aikinu Logo" class="h-10 mb-2 bg-white p-1">
+        <img src="images/ak2.png" alt="Aikinu Logo" class="h-10 mb-2 bg-white p-1" loading="lazy">
         <p>Revolutionizing Tech Talent: Aikinu Leads, The Industry Follows.</p>
       </div>
       <div>
@@ -73,5 +79,14 @@
       </div>
     </div>
   </footer>
+
+  <!-- Simple JS for Mobile Menu -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
