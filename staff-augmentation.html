@@ -62,7 +62,7 @@
     <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between">
       <div class="flex items-center justify-between w-full md:w-auto">
         <a href="index.html" class="hover:scale-105 transition-transform duration-200">
-          <img src="images/ak2.png" alt="Aikinu Logo" class="h-20 md:h-24 bg-white p-2" loading="lazy" onerror="this.src='images/fallback-image.jpg'">
+          <img src="images/ak2.png" alt="Aikinu Logo" class="h-20 md:h-24 bg-white p-2" loading="lazy">
         </a>
         <button id="menu-toggle" class="md:hidden text-blue-800 focus:outline-none flex items-center" aria-expanded="false" aria-controls="nav-menu">
           <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -113,7 +113,7 @@
       <h2 class="text-4xl font-bold text-blue-900 mb-6">AIKINU RECRUITMENT SERVICES</h2>
       <div class="flex flex-col md:flex-row items-center mb-10">
         <div class="md:w-1/2">
-          <img src="images/snd-img.png" alt="Team discussing tech recruitment strategies" class="rounded shadow hover:scale-105 transition-transform duration-200" loading="lazy" onerror="this.src='images/fallback-image.jpg'">
+          <img src="images/snd-img.png" alt="Team discussing tech recruitment strategies" class="rounded shadow hover:scale-105 transition-transform duration-200" loading="lazy">
         </div>
         <div class="md:w-1/2 md:pl-8 mt-6 md:mt-0">
           <p class="text-gray-800 max-w-prose leading-loose">Aikinu’s staff augmentation services empower your organization by providing <span class="text-orange-500">highly skilled professionals</span> on a short-term or long-term basis. We handle the entire hiring process, ensuring seamless integration of top-tier talent into your team.</p>
@@ -128,7 +128,7 @@
           <p class="text-gray-800 max-w-prose leading-loose">Our staff augmentation services are ideal for businesses facing tight deadlines, skill gaps, or unexpected workforce fluctuations. By tapping into our extensive network of tech professionals, you can quickly scale your team to meet your evolving needs without the overhead costs and administrative burden of traditional hiring.</p>
         </div>
         <div class="md:w-1/2">
-          <img src="images/Depositphotos_279405210_DS.jpg" alt="Business interview with tech candidate" class="rounded shadow hover:scale-105 transition-transform duration-200" loading="lazy" onerror="this.src='images/fallback-image.jpg'">
+          <img src="images/Depositphotos_279405210_DS.jpg" alt="Business interview with tech candidate" class="rounded shadow hover:scale-105 transition-transform duration-200" loading="lazy">
         </div>
       </div>
 
@@ -161,8 +161,7 @@
           <span><strong>TECH SUPPORT:</strong> Enhance your organization’s technical capabilities with on-demand support from skilled professionals.</span>
         </li>
       </ul>
-      <!-- Note: Replace with a unique image if available -->
-      <img src="images/tech-professional.jpg" alt="Tech professional working on a project" class="mx-auto rounded shadow hover:scale-105 transition-transform duration-200" loading="lazy" onerror="this.src='images/fallback-image.jpg'">
+      <img src="images/Depositphotos_254316914_DS.jpg" alt="Tech professional working on a project" class="mx-auto rounded shadow hover:scale-105 transition-transform duration-200" loading="lazy">
     </section>
 
     <hr class="border-gray-200 my-10">
@@ -198,7 +197,7 @@
   <footer class="bg-gray-900 text-white py-10">
     <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-6 text-sm">
       <div>
-        <img src="images/ak2.png" alt="Aikinu Logo" class="h-10 mb-2 bg-white p-1" loading="lazy" onerror="this.src='images/fallback-image.jpg'">
+        <img src="images/ak2.png" alt="Aikinu Logo" class="h-10 mb-2 bg-white p-1" loading="lazy">
         <p>Revolutionizing Tech Talent: Aikinu Leads, The Industry Follows.</p>
       </div>
       <div>
@@ -240,7 +239,30 @@
   </script>
   -->
 
-  <!-- Minified JavaScript for Mobile Menu and Dropdown -->
-  <script>const t=document.getElementById("menu-toggle"),n=document.getElementById("nav-menu"),e=document.getElementById("menu-close");t.addEventListener("click",()=>{n.classList.add("open"),n.classList.remove("hidden"),t.setAttribute("aria-expanded","true")}),e&&e.addEventListener("click",()=>{n.classList.remove("open"),n.classList.add("hidden"),t.setAttribute("aria-expanded","false")});</script>
+  <!-- Updated JavaScript for Mobile Menu and Dropdown -->
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("nav-menu");
+    const menuClose = document.getElementById("menu-close");
+
+    menuToggle.addEventListener("click", () => {
+      if (!navMenu.classList.contains("open")) {
+        navMenu.classList.add("open");
+        navMenu.classList.remove("hidden");
+        menuToggle.setAttribute("aria-expanded", "true");
+      }
+    });
+
+    if (menuClose) {
+      menuClose.addEventListener("click", (event) => {
+        event.preventDefault();
+        if (navMenu.classList.contains("open")) {
+          navMenu.classList.remove("open");
+          navMenu.classList.add("hidden");
+          menuToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+    }
+  </script>
 </body>
 </html>

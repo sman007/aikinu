@@ -44,7 +44,7 @@
     <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between">
       <div class="flex items-center justify-between w-full md:w-auto">
         <a href="index.html" class="hover:scale-105 transition-transform duration-200">
-          <img src="images/ak2.png" alt="Aikinu Logo" class="h-20 md:h-24 bg-white p-2" loading="lazy" onerror="this.src='images/fallback-image.jpg'">
+          <img src="images/ak2.png" alt="Aikinu Logo" class="h-20 md:h-24 bg-white p-2" loading="lazy">
         </a>
         <button id="menu-toggle" class="md:hidden text-blue-800 focus:outline-none flex items-center" aria-expanded="false" aria-controls="nav-menu">
           <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -87,7 +87,7 @@
       <p class="text-gray-800 mb-6 max-w-prose leading-loose">At Aikinu, we understand the unique needs of technology-driven businesses. That’s why we offer personalized recruitment services, taking the time to understand your organization’s goals, culture, and technical requirements before identifying the most suitable candidates.</p>
       <div class="flex flex-col md:flex-row items-center mb-10">
         <div class="md:w-1/2">
-          <img src="images/Depositphotos_279405210_DS.jpg" alt="Business interview with tech candidate" class="rounded shadow hover:scale-105 transition-transform duration-200" loading="lazy" onerror="this.src='images/fallback-image.jpg'">
+          <img src="images/Depositphotos_279405210_DS.jpg" alt="Business interview with tech candidate" class="rounded shadow hover:scale-105 transition-transform duration-200" loading="lazy">
         </div>
         <div class="md:w-1/2 md:pl-8 mt-6 md:mt-0">
           <p class="text-gray-800 max-w-prose leading-loose">Our team of industry experts specializes in finding and attracting <span class="text-orange-500">top-tier tech talent</span>. By leveraging our extensive network of skilled professionals and utilizing advanced recruitment techniques, we can consistently deliver high-quality candidates who align with your company’s vision and values.</p>
@@ -124,7 +124,7 @@
           <span><strong>Permanent placements:</strong> We help you fill long-term positions with growth-aligned candidates.</span>
         </li>
       </ul>
-      <img src="images/Depositphotos_254317086_DS.jpg" alt="Smiling recruiter assisting a client" class="mx-auto rounded shadow hover:scale-105 transition-transform duration-200" loading="lazy" onerror="this.src='images/fallback-image.jpg'">
+      <img src="images/Depositphotos_254317086_DS.jpg" alt="Smiling recruiter assisting a client" class="mx-auto rounded shadow hover:scale-105 transition-transform duration-200" loading="lazy">
     </section>
 
     <hr class="border-gray-200 my-10">
@@ -160,7 +160,7 @@
   <footer class="bg-gray-900 text-white py-10">
     <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-6 text-sm">
       <div>
-        <img src="images/ak2.png" alt="Aikinu Logo" class="h-10 mb-2 bg-white p-1" loading="lazy" onerror="this.src='images/fallback-image.jpg'">
+        <img src="images/ak2.png" alt="Aikinu Logo" class="h-10 mb-2 bg-white p-1" loading="lazy">
         <p>Revolutionizing Tech Talent: Aikinu Leads, The Industry Follows.</p>
       </div>
       <div>
@@ -202,7 +202,30 @@
   </script>
   -->
 
-  <!-- Minified JavaScript for Mobile Menu and Dropdown -->
-  <script>const t=document.getElementById("menu-toggle"),n=document.getElementById("nav-menu"),e=document.getElementById("menu-close");t.addEventListener("click",()=>{n.classList.add("open"),n.classList.remove("hidden"),t.setAttribute("aria-expanded","true")}),e&&e.addEventListener("click",()=>{n.classList.remove("open"),n.classList.add("hidden"),t.setAttribute("aria-expanded","false")});</script>
+  <!-- Updated JavaScript for Mobile Menu and Dropdown -->
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("nav-menu");
+    const menuClose = document.getElementById("menu-close");
+
+    menuToggle.addEventListener("click", () => {
+      if (!navMenu.classList.contains("open")) {
+        navMenu.classList.add("open");
+        navMenu.classList.remove("hidden");
+        menuToggle.setAttribute("aria-expanded", "true");
+      }
+    });
+
+    if (menuClose) {
+      menuClose.addEventListener("click", (event) => {
+        event.preventDefault();
+        if (navMenu.classList.contains("open")) {
+          navMenu.classList.remove("open");
+          navMenu.classList.add("hidden");
+          menuToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+    }
+  </script>
 </body>
 </html>
