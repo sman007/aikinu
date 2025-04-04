@@ -3,29 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Aikinu - Your trusted partner for tech recruitment and staff augmentation." />
-  <meta property="og:title" content="Aikinu - Tech Recruitment and Staff Augmentation" />
-  <meta property="og:description" content="Aikinu connects businesses with top-tier tech talent for recruitment and staff augmentation. Contact us today!" />
-  <meta property="og:image" content="https://main.dwkx2q6prcd20.amplifyapp.com/images/image-1-1-1.png" />
-  <meta property="og:url" content="https://main.dwkx2q6prcd20.amplifyapp.com/" />
+  <meta name="description" content="Aikinu offers expert staff augmentation services to boost your team with on-demand tech talent. Contact us for short-term and long-term solutions." />
+  <meta property="og:title" content="Aikinu - Staff Augmentation Services" />
+  <meta property="og:description" content="Boost your team’s capabilities with Aikinu’s expert staff augmentation services. On-demand tech talent for short-term and long-term needs." />
+  <meta property="og:image" content="https://main.dwkx2q6prcd20.amplifyapp.com/images/snd-img.png" />
+  <meta property="og:url" content="https://main.dwkx2q6prcd20.amplifyapp.com/staff-augmentation.html" />
   <meta property="og:type" content="website" />
-  <link rel="preload" href="images/image-1-1-1.png" as="image">
-  <title>Aikinu - Your Trusted Tech Recruitment Partner</title>
+  <link rel="preload" href="images/snd-img.png" as="image">
+  <title>Aikinu - Staff Augmentation</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
-    /* Custom focus styles for accessibility */
+    .hero-section {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/snd-img.png');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      color: white;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+    .hero-section > * {
+      position: relative;
+      z-index: 1;
+    }
     a:focus, button:focus {
       outline: none;
       box-shadow: 0 0 0 2px #f97316;
     }
-    /* Dropdown arrow */
     .dropdown-toggle::after {
       content: '▼';
       display: inline-block;
       margin-left: 0.25rem;
       font-size: 0.75rem;
     }
-    /* Mobile menu slide-in */
     #nav-menu {
       transition: transform 300ms ease-in-out;
     }
@@ -36,11 +45,16 @@
       #nav-menu {
         transform: translateX(100%);
       }
+      .hero-section h1 {
+        font-size: 2rem; /* text-3xl */
+      }
+      .hero-section p {
+        font-size: 1rem; /* text-lg */
+      }
     }
   </style>
 </head>
 <body class="bg-white text-gray-800">
-  <!-- Skip to content link -->
   <a href="#main" class="sr-only focus:not-sr-only">Skip to content</a>
 
   <!-- Header with Redesigned Navigation -->
@@ -66,7 +80,7 @@
           </button>
         </div>
         <ul class="flex flex-col md:flex-row md:space-x-8 text-lg font-semibold">
-          <li><a href="index.html" class="text-blue-800 hover:border-b-2 hover:border-orange-500 py-4 px-6 md:py-2 md:px-4 inline-block font-bold text-orange-500">Home</a></li>
+          <li><a href="index.html" class="text-blue-800 hover:border-b-2 hover:border-orange-500 py-4 px-6 md:py-2 md:px-4 inline-block">Home</a></li>
           <li><a href="about.html" class="text-blue-800 hover:border-b-2 hover:border-orange-500 py-4 px-6 md:py-2 md:px-4 inline-block">About Us</a></li>
           <li class="relative group">
             <a href="#" class="text-blue-800 hover:border-b-2 hover:border-orange-500 py-4 px-6 md:py-2 md:px-4 inline-block dropdown-toggle" aria-haspopup="true" aria-expanded="false">Services</a>
@@ -84,55 +98,74 @@
     </div>
   </header>
 
-  <!-- Main Content -->
+  <!-- Hero Section -->
   <main id="main">
-    <section class="bg-gray-50 py-16">
-      <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
-        <div class="md:w-1/2 mb-10 md:mb-0">
-          <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-900 leading-tight">Your Trusted Partner in Tech Recruitment and Staff Augmentation</h1>
-          <p class="mt-4 text-gray-800 text-lg max-w-prose leading-loose">Welcome to Aikinu, your trusted partner for technology recruitment and staff augmentation services. We are dedicated to connecting businesses with top-tier tech talent.</p>
-          <a href="contact.html" class="mt-6 inline-block bg-orange-500 text-white py-3 px-6 rounded shadow hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500">Get Started</a>
-        </div>
-        <div class="md:w-1/2">
-          <img src="images/image-1-1-1.png" alt="Illustration of a person working at a desk for tech recruitment" class="hover:scale-105 transition-transform duration-200" loading="lazy" onerror="this.src='images/fallback-image.jpg'">
-        </div>
+    <section class="hero-section py-16 text-center">
+      <div class="container mx-auto px-6">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">EXPERT STAFF AUGMENTATION SERVICES</h1>
+        <p class="text-lg sm:text-xl md:text-2xl mb-6">BOOST YOUR TEAM’S CAPABILITIES WITH ON-DEMAND TALENT</p>
+        <a href="contact.html" class="inline-block bg-orange-500 text-white py-3 px-6 rounded shadow hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500">Get Started Now</a>
       </div>
     </section>
 
-    <!-- About Preview Section -->
-    <section class="container mx-auto px-6 py-20">
-      <div class="flex flex-col md:flex-row items-center">
+    <!-- Main Content -->
+    <section class="py-20 px-6 max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-blue-900 mb-6">AIKINU RECRUITMENT SERVICES</h2>
+      <div class="flex flex-col md:flex-row items-center mb-10">
         <div class="md:w-1/2">
-          <img src="images/snd-img.png" alt="Team discussing tech recruitment strategies" class="hover:scale-105 transition-transform duration-200" loading="lazy" onerror="this.src='images/fallback-image.jpg'">
+          <img src="images/snd-img.png" alt="Team discussing tech recruitment strategies" class="rounded shadow hover:scale-105 transition-transform duration-200" loading="lazy" onerror="this.src='images/fallback-image.jpg'">
         </div>
-        <div class="md:w-1/2 md:pl-12 mt-8 md:mt-0">
-          <h2 class="text-2xl font-bold text-blue-900 mb-4">About Us</h2>
-          <p class="text-gray-800 mb-4 max-w-prose leading-loose">Welcome to Aikinu, your trusted partner for technology recruitment and staff augmentation services. We are dedicated to connecting businesses with top-tier tech talent, ensuring a perfect fit for both parties.</p>
-          <a href="about.html" class="text-orange-500 font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-orange-500">Learn More</a>
+        <div class="md:w-1/2 md:pl-8 mt-6 md:mt-0">
+          <p class="text-gray-800 max-w-prose leading-loose">Aikinu’s staff augmentation services empower your organization by providing <span class="text-orange-500">highly skilled professionals</span> on a short-term or long-term basis. We handle the entire hiring process, ensuring seamless integration of top-tier talent into your team.</p>
+          <a href="contact.html" class="text-orange-500 font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-orange-500">Learn More</a>
         </div>
       </div>
+
+      <hr class="border-gray-200 my-10">
+
+      <div class="flex flex-col md:flex-row items-center mb-10">
+        <div class="md:w-1/2 md:pr-8 mb-6 md:mb-0">
+          <p class="text-gray-800 max-w-prose leading-loose">Our staff augmentation services are ideal for businesses facing tight deadlines, skill gaps, or unexpected workforce fluctuations. By tapping into our extensive network of tech professionals, you can quickly scale your team to meet your evolving needs without the overhead costs and administrative burden of traditional hiring.</p>
+        </div>
+        <div class="md:w-1/2">
+          <img src="images/Depositphotos_279405210_DS.jpg" alt="Business interview with tech candidate" class="rounded shadow hover:scale-105 transition-transform duration-200" loading="lazy" onerror="this.src='images/fallback-image.jpg'">
+        </div>
+      </div>
+
+      <hr class="border-gray-200 my-10">
+
+      <h3 class="text-2xl font-bold text-blue-900 mb-4">OUR STAFF AUGMENTATION SERVICES INCLUDE:</h3>
+      <ul class="list-none text-gray-800 space-y-4 mb-10">
+        <li class="flex items-start">
+          <svg class="h-6 w-6 text-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>SHORT-TERM AND LONG-TERM CONTRACTS:</strong> Access top talent for specific projects or cover temporary staffing needs.</span>
+        </li>
+        <li class="flex items-start">
+          <svg class="h-6 w-6 text-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>IT CONSULTING:</strong> Benefit from the expertise of seasoned IT consultants to help you navigate complex technological challenges.</span>
+        </li>
+        <li class="flex items-start">
+          <svg class="h-6 w-6 text-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>PROJECT MANAGEMENT:</strong> Add experienced project managers to your team to ensure smooth project execution and timely delivery.</span>
+        </li>
+        <li class="flex items-start">
+          <svg class="h-6 w-6 text-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>TECH SUPPORT:</strong> Enhance your organization’s technical capabilities with on-demand support from skilled professionals.</span>
+        </li>
+      </ul>
+      <!-- Note: Replace with a unique image if available -->
+      <img src="images/tech-professional.jpg" alt="Tech professional working on a project" class="mx-auto rounded shadow hover:scale-105 transition-transform duration-200" loading="lazy" onerror="this.src='images/fallback-image.jpg'">
     </section>
 
-    <!-- Services Highlights -->
-    <section class="bg-white py-20">
-      <div class="container mx-auto px-6 text-center">
-        <h3 class="text-2xl font-bold text-blue-900 mb-6">Why Choose Aikinu</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <img src="images/image-2-1.png" alt="Illustration of tailored recruitment process" class="mx-auto mb-4 hover:scale-105 transition-transform duration-200" loading="lazy" onerror="this.src='images/fallback-image.jpg'">
-            <p class="font-semibold text-gray-800">Tailored Recruitment Solutions</p>
-          </div>
-          <div>
-            <img src="images/div.col-lg-6.png" alt="Illustration of northshoring team collaboration" class="mx-auto mb-4 hover:scale-105 transition-transform duration-200" loading="lazy" onerror="this.src='images/fallback-image.jpg'">
-            <p class="font-semibold text-gray-800">Northshoring Across the Americas</p>
-          </div>
-          <div>
-            <img src="images/image-1-1-1.png" alt="Illustration of client satisfaction in tech recruitment" class="mx-auto mb-4 hover:scale-105 transition-transform duration-200" loading="lazy" onerror="this.src='images/fallback-image.jpg'">
-            <p class="font-semibold text-gray-800">Unmatched Client Satisfaction</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <hr class="border-gray-200 my-10">
 
     <!-- Testimonials Section -->
     <section class="bg-gray-100 py-12">

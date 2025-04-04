@@ -4,61 +4,155 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Aikinu’s recruitment services for top-tier tech talent." />
+  <meta property="og:title" content="Aikinu - Recruitment Services" />
+  <meta property="og:description" content="Aikinu provides personalized tech recruitment services to connect businesses with top talent." />
+  <meta property="og:image" content="https://main.dwkx2q6prcd20.amplifyapp.com/images/Depositphotos_279405210_DS.jpg" />
+  <meta property="og:url" content="https://main.dwkx2q6prcd20.amplifyapp.com/recruitment-services.html" />
+  <meta property="og:type" content="website" />
+  <link rel="preload" href="images/Depositphotos_279405210_DS.jpg" as="image">
   <title>Aikinu - Recruitment Services</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    a:focus, button:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px #f97316;
+    }
+    .dropdown-toggle::after {
+      content: '▼';
+      display: inline-block;
+      margin-left: 0.25rem;
+      font-size: 0.75rem;
+    }
+    #nav-menu {
+      transition: transform 300ms ease-in-out;
+    }
+    @media (max-width: 767px) {
+      #nav-menu.open {
+        transform: translateX(0);
+      }
+      #nav-menu {
+        transform: translateX(100%);
+      }
+    }
+  </style>
 </head>
 <body class="bg-white text-gray-800">
-  <!-- Header -->
-  <header class="bg-white shadow">
+  <a href="#main" class="sr-only focus:not-sr-only">Skip to content</a>
+
+  <!-- Header with Redesigned Navigation -->
+  <header class="bg-white shadow border-b border-gray-200 sticky top-0 z-50">
     <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between">
       <div class="flex items-center justify-between w-full md:w-auto">
-        <a href="index.html">
-          <img src="images/ak2.png" alt="Aikinu Logo" class="h-20 md:h-24 bg-white p-2" loading="lazy">
+        <a href="index.html" class="hover:scale-105 transition-transform duration-200">
+          <img src="images/ak2.png" alt="Aikinu Logo" class="h-20 md:h-24 bg-white p-2" loading="lazy" onerror="this.src='images/fallback-image.jpg'">
         </a>
-        <button id="menu-toggle" class="md:hidden text-blue-900 focus:outline-none">
-          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <button id="menu-toggle" class="md:hidden text-blue-800 focus:outline-none flex items-center" aria-expanded="false" aria-controls="nav-menu">
+          <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
           </svg>
+          <span class="ml-2 text-sm text-blue-800">Menu</span>
         </button>
       </div>
-      <nav id="nav-menu" class="w-full md:w-auto text-center hidden md:block mt-4 md:mt-0">
-        <ul class="flex flex-col md:flex-row md:space-x-6 text-base font-semibold">
-          <li><a href="index.html" class="text-blue-900 hover:text-orange-500 py-2 inline-block">Home</a></li>
-          <li><a href="about.html" class="text-blue-900 hover:text-orange-500 py-2 inline-block">About Us</a></li>
+      <nav id="nav-menu" class="w-full md:w-auto text-center hidden md:block mt-4 md:mt-0 fixed md:static inset-0 bg-white z-50 md:bg-transparent md:z-auto" aria-label="Main navigation">
+        <div class="flex justify-end p-4 md:hidden">
+          <button id="menu-close" class="text-blue-800 focus:outline-none">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <ul class="flex flex-col md:flex-row md:space-x-8 text-lg font-semibold">
+          <li><a href="index.html" class="text-blue-800 hover:border-b-2 hover:border-orange-500 py-4 px-6 md:py-2 md:px-4 inline-block">Home</a></li>
+          <li><a href="about.html" class="text-blue-800 hover:border-b-2 hover:border-orange-500 py-4 px-6 md:py-2 md:px-4 inline-block">About Us</a></li>
           <li class="relative group">
-            <a href="#" class="text-blue-900 hover:text-orange-500 py-2 inline-block">Services</a>
-            <ul class="absolute hidden group-hover:block bg-white shadow mt-1 text-sm z-10 text-left">
-              <li><a href="recruitment-services.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Recruitment Services</a></li>
-              <li><a href="staff-augmentation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Staff Augmentation</a></li>
+            <a href="#" class="text-blue-800 hover:border-b-2 hover:border-orange-500 py-4 px-6 md:py-2 md:px-4 inline-block dropdown-toggle" aria-haspopup="true" aria-expanded="false">Services</a>
+            <ul class="absolute hidden group-hover:block bg-white shadow mt-1 text-sm z-10 text-left transition-all duration-200 md:w-48">
+              <li><a href="recruitment-services.html" class="block px-6 py-3 hover:bg-gray-50 whitespace-nowrap font-bold text-orange-500">Recruitment Services</a></li>
+              <li><a href="staff-augmentation.html" class="block px-6 py-3 hover:bg-gray-50 whitespace-nowrap">Staff Augmentation</a></li>
             </ul>
           </li>
-          <li><a href="contact.html" class="text-blue-900 hover:text-orange-500 py-2 inline-block">Contact</a></li>
+          <li><a href="#" class="text-blue-800 hover:border-b-2 hover:border-orange-500 py-4 px-6 md:py-2 md:px-4 inline-block">Industries</a></li>
+          <li><a href="#" class="text-blue-800 hover:border-b-2 hover:border-orange-500 py-4 px-6 md:py-2 md:px-4 inline-block">Job Seekers</a></li>
+          <li><a href="#" class="text-blue-800 hover:border-b-2 hover:border-orange-500 py-4 px-6 md:py-2 md:px-4 inline-block">Blog</a></li>
+          <li><a href="contact.html" class="text-blue-800 hover:border-b-2 hover:border-orange-500 py-4 px-6 md:py-2 md:px-4 inline-block">Contact Us</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Recruitment Services Content -->
-  <main>
-    <section class="py-16 px-6 max-w-6xl mx-auto">
+  <!-- Main Content -->
+  <main id="main">
+    <section class="py-20 px-6 max-w-6xl mx-auto">
       <h1 class="text-4xl font-bold text-blue-900 mb-6">Aikinu Recruitment Services</h1>
-      <p class="text-gray-700 mb-6">At Aikinu, we understand the unique needs of technology-driven businesses. That’s why we offer personalized recruitment services, taking the time to understand your organization’s goals, culture, and technical requirements before identifying the most suitable candidates.</p>
+      <p class="text-gray-800 mb-6 max-w-prose leading-loose">At Aikinu, we understand the unique needs of technology-driven businesses. That’s why we offer personalized recruitment services, taking the time to understand your organization’s goals, culture, and technical requirements before identifying the most suitable candidates.</p>
       <div class="flex flex-col md:flex-row items-center mb-10">
         <div class="md:w-1/2">
-          <img src="images/Depositphotos_279405210_DS.jpg" alt="Business interview with tech candidate" class="rounded shadow" loading="lazy">
+          <img src="images/Depositphotos_279405210_DS.jpg" alt="Business interview with tech candidate" class="rounded shadow hover:scale-105 transition-transform duration-200" loading="lazy" onerror="this.src='images/fallback-image.jpg'">
         </div>
         <div class="md:w-1/2 md:pl-8 mt-6 md:mt-0">
-          <p class="text-gray-700">Our team of industry experts specializes in finding and attracting top-tier tech talent. By leveraging our extensive network of skilled professionals and utilizing advanced recruitment techniques, we can consistently deliver high-quality candidates who align with your company’s vision and values.</p>
+          <p class="text-gray-800 max-w-prose leading-loose">Our team of industry experts specializes in finding and attracting <span class="text-orange-500">top-tier tech talent</span>. By leveraging our extensive network of skilled professionals and utilizing advanced recruitment techniques, we can consistently deliver high-quality candidates who align with your company’s vision and values.</p>
+          <a href="contact.html" class="text-orange-500 font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-orange-500">Learn More</a>
         </div>
       </div>
+
+      <hr class="border-gray-200 my-10">
+
       <h2 class="text-2xl font-bold text-blue-900 mb-4">Our Recruitment Services Include:</h2>
-      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-10">
-        <li><strong>Contract and temporary staffing:</strong> We can provide on-demand talent for specific needs.</li>
-        <li><strong>Project-based hiring:</strong> We assemble teams of skilled professionals for seamless execution and timely delivery.</li>
-        <li><strong>Executive search:</strong> We identify and attract top-level executives who align with your company's goals.</li>
-        <li><strong>Permanent placements:</strong> We help you fill long-term positions with growth-aligned candidates.</li>
+      <ul class="list-none text-gray-800 space-y-4 mb-10">
+        <li class="flex items-start">
+          <svg class="h-6 w-6 text-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Contract and temporary staffing:</strong> We can provide on-demand talent for specific needs.</span>
+        </li>
+        <li class="flex items-start">
+          <svg class="h-6 w-6 text-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Project-based hiring:</strong> We assemble teams of skilled professionals for seamless execution and timely delivery.</span>
+        </li>
+        <li class="flex items-start">
+          <svg class="h-6 w-6 text-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Executive search:</strong> We identify and attract top-level executives who align with your company's goals.</span>
+        </li>
+        <li class="flex items-start">
+          <svg class="h-6 w-6 text-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Permanent placements:</strong> We help you fill long-term positions with growth-aligned candidates.</span>
+        </li>
       </ul>
-      <img src="images/Depositphotos_254317086_DS.jpg" alt="Smiling recruiter assisting a client" class="mx-auto rounded shadow" loading="lazy">
+      <img src="images/Depositphotos_254317086_DS.jpg" alt="Smiling recruiter assisting a client" class="mx-auto rounded shadow hover:scale-105 transition-transform duration-200" loading="lazy" onerror="this.src='images/fallback-image.jpg'">
+    </section>
+
+    <hr class="border-gray-200 my-10">
+
+    <!-- Testimonials Section -->
+    <section class="bg-gray-100 py-12">
+      <div class="container mx-auto px-6 text-center">
+        <h3 class="text-2xl font-bold text-blue-900 mb-6">What Our Clients Say</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white p-6 rounded shadow">
+            <p class="text-gray-800">"Aikinu helped us scale our team quickly and efficiently – highly recommend!"</p>
+            <p class="mt-2 font-semibold text-gray-800">– Tech Startup CEO</p>
+          </div>
+          <div class="bg-white p-6 rounded shadow">
+            <p class="text-gray-800">"Their staff augmentation services saved our project timeline."</p>
+            <p class="mt-2 font-semibold text-gray-800">– Enterprise Manager</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-gray-100 py-12 text-center">
+      <div class="container mx-auto px-6">
+        <h3 class="text-2xl font-bold text-blue-900 mb-4">Ready to Scale Your Team?</h3>
+        <p class="text-gray-800 mb-6 max-w-prose mx-auto leading-loose">Contact us today to find the right talent for your needs.</p>
+        <a href="contact.html" class="inline-block bg-orange-500 text-white py-3 px-6 rounded shadow hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500">Get in Touch</a>
+      </div>
     </section>
   </main>
 
@@ -66,41 +160,49 @@
   <footer class="bg-gray-900 text-white py-10">
     <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-6 text-sm">
       <div>
-        <img src="images/ak2.png" alt="Aikinu Logo" class="h-10 mb-2 bg-white p-1" loading="lazy">
+        <img src="images/ak2.png" alt="Aikinu Logo" class="h-10 mb-2 bg-white p-1" loading="lazy" onerror="this.src='images/fallback-image.jpg'">
         <p>Revolutionizing Tech Talent: Aikinu Leads, The Industry Follows.</p>
       </div>
       <div>
         <h4 class="font-semibold mb-2">Company</h4>
         <ul>
-          <li><a href="about.html" class="hover:underline">About Us</a></li>
-          <li><a href="recruitment-services.html" class="hover:underline">Recruitment Services</a></li>
-          <li><a href="staff-augmentation.html" class="hover:underline">Staff Augmentation</a></li>
-          <li><a href="contact.html" class="hover:underline">Contact</a></li>
+          <li><a href="about.html" class="hover:underline focus:outline-none focus:ring-2 focus:ring-orange-500">About Us</a></li>
+          <li><a href="recruitment-services.html" class="hover:underline focus:outline-none focus:ring-2 focus:ring-orange-500">Recruitment Services</a></li>
+          <li><a href="staff-augmentation.html" class="hover:underline focus:outline-none focus:ring-2 focus:ring-orange-500">Staff Augmentation</a></li>
+          <li><a href="contact.html" class="hover:underline focus:outline-none focus:ring-2 focus:ring-orange-500">Contact</a></li>
         </ul>
       </div>
       <div>
         <h4 class="font-semibold mb-2">Support</h4>
         <ul>
-          <li><a href="#" class="hover:underline">FAQ</a></li>
-          <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+          <li><a href="#" class="hover:underline focus:outline-none focus:ring-2 focus:ring-orange-500">FAQ</a></li>
+          <li><a href="#" class="hover:underline focus:outline-none focus:ring-2 focus:ring-orange-500">Privacy Policy</a></li>
         </ul>
       </div>
       <div>
         <h4 class="font-semibold mb-2">Contact</h4>
         <p>Aikinu LLC<br>16192 Coastal Highway<br>Lewes, DE 19958</p>
-        <p>Email: <a href="mailto:info@aikinu.com" class="text-orange-400 hover:underline">info@aikinu.com</a></p>
+        <p>Email: <a href="mailto:info@aikinu.com" class="text-orange-400 hover:underline focus:outline-none focus:ring-2 focus:ring-orange-500">info@aikinu.com</a></p>
         <p>Phone: +1.646.494.8500</p>
       </div>
     </div>
   </footer>
 
-  <!-- Simple JS for Mobile Menu -->
+  <!-- Placeholder for Live Chat Widget -->
+  <!-- Add live chat widget here (e.g., Intercom, Drift) -->
+
+  <!-- Google Analytics Placeholder -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-X"></script>
   <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    menuToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('hidden');
-    });
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-XXXXX-X');
   </script>
+  -->
+
+  <!-- Minified JavaScript for Mobile Menu and Dropdown -->
+  <script>const t=document.getElementById("menu-toggle"),n=document.getElementById("nav-menu"),e=document.getElementById("menu-close");t.addEventListener("click",()=>{n.classList.add("open"),n.classList.remove("hidden"),t.setAttribute("aria-expanded","true")}),e&&e.addEventListener("click",()=>{n.classList.remove("open"),n.classList.add("hidden"),t.setAttribute("aria-expanded","false")});</script>
 </body>
 </html>
