@@ -3,77 +3,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Aikinu for tech recruitment and staff augmentation inquiries." />
   <title>Aikinu - Contact</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-white text-gray-800">
   <!-- Header -->
-  <header class="bg-white shadow">
+  <header class="bg-white shadow sticky top-0 z-50">
     <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between">
-      <div class="mb-4 md:mb-0 flex justify-center md:justify-start w-full md:w-auto">
+      <div class="flex items-center justify-between w-full md:w-auto">
         <a href="index.html">
-          <img src="images/ak2.png" alt="Aikinu Logo" class="h-20 md:h-24 bg-white p-2">
+          <img src="images/ak2.png" alt="Aikinu Logo" class="h-20 md:h-24 bg-white p-2" loading="lazy">
         </a>
+        <button id="menu-toggle" class="md:hidden text-blue-900 focus:outline-none">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
       </div>
-      <nav class="w-full md:w-auto text-center">
+      <nav id="nav-menu" class="hidden md:block w-full md:w-auto text-center mt-4 md:mt-0">
         <ul class="flex flex-col md:flex-row md:space-x-6 text-base font-semibold">
-          <li><a href="index.html" class="text-blue-900 hover:text-orange-500 py-2 inline-block">Home</a></li>
-          <li><a href="about.html" class="text-blue-900 hover:text-orange-500 py-2 inline-block">About Us</a></li>
+          <li><a href="index.html" class="text-blue-900 hover:text-orange-500 py-3 px-4 inline-block transition duration-300">Home</a></li>
+          <li><a href="about.html" class="text-blue-900 hover:text-orange-500 py-3 px-4 inline-block transition duration-300">About Us</a></li>
           <li class="relative group">
-            <a href="#" class="text-blue-900 hover:text-orange-500 py-2 inline-block">Services</a>
+            <span class="text-blue-900 py-3 px-4 inline-block">Services</span>
             <ul class="absolute hidden group-hover:block bg-white shadow mt-1 text-sm z-10 text-left">
-              <li><a href="recruitment-services.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Recruitment Services</a></li>
-              <li><a href="staff-augmentation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Staff Augmentation</a></li>
+              <li><a href="recruitment-services.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap transition duration-300">Recruitment Services</a></li>
+              <li><a href="staff-augmentation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap transition duration-300">Staff Augmentation</a></li>
             </ul>
           </li>
-          <li><a href="contact.html" class="text-blue-900 hover:text-orange-500 py-2 inline-block">Contact</a></li>
+          <li><a href="contact.html" class="text-blue-900 hover:text-orange-500 py-3 px-4 inline-block transition duration-300">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <!-- Contact Content -->
-  <section class="px-6 md:px-12 py-16 max-w-4xl mx-auto">
-    <h1 class="text-4xl font-bold text-blue-900 mb-6">Contact Us</h1>
-    <p class="text-gray-700 mb-6 leading-loose">Have a question or need help finding the right talent? Reach out to us using the information below, and a member of our team will get back to you as soon as possible.</p>
-
-    <div class="bg-gray-100 rounded p-6 shadow-md">
-      <p class="text-gray-800 mb-2"><strong>Address:</strong> Aikinu LLC, 16192 Coastal Highway, Lewes, DE 19958</p>
-      <p class="text-gray-800 mb-2"><strong>Email:</strong> <a href="mailto:info@aikinu.com" class="text-blue-600 hover:underline">info@aikinu.com</a></p>
-      <p class="text-gray-800"><strong>Phone:</strong> +1.646.494.8500</p>
-    </div>
-  </section>
+  <main>
+    <section class="px-6 md:px-12 py-16 max-w-4xl mx-auto">
+      <h1 class="text-5xl font-bold text-blue-800 mb-6">Contact Us</h1>
+      <p class="text-gray-700 mb-6 leading-loose">Have a question or need help finding the right talent? Reach out to us, and we’ll respond as soon as possible.</p>
+      <div class="bg-gray-100 rounded p-6 shadow-md mb-6">
+        <p class="text-gray-800 mb-2"><strong>Address:</strong> Aikinu LLC, 16192 Coastal Highway, Lewes, DE 19958</p>
+        <p class="text-gray-800 mb-2"><strong>Email:</strong> <a href="mailto:info@aikinu.com" class="text-blue-600 hover:underline transition duration-300">info@aikinu.com</a></p>
+        <p class="text-gray-800"><strong>Phone:</strong> +1.646.494.8500</p>
+      </div>
+      <form class="space-y-4">
+        <input type="text" placeholder="Name" class="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
+        <input type="email" placeholder="Email" class="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
+        <textarea placeholder="Message" class="w-full p-3 border rounded h-32 focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+        <button type="submit" class="bg-orange-500 text-white py-3 px-6 rounded shadow hover:bg-orange-600 transition duration-300">Send Message</button>
+      </form>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer class="bg-gray-900 text-white py-10">
     <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-6 text-sm">
       <div>
-        <img src="images/ak2.png" alt="Aikinu Logo" class="h-10 mb-2 bg-white p-1">
+        <img src="images/ak2.png" alt="Aikinu Logo" class="h-10 mb-2 bg-white p-1" loading="lazy">
         <p>Revolutionizing Tech Talent: Aikinu Leads, The Industry Follows.</p>
       </div>
       <div>
         <h4 class="font-semibold mb-2">Company</h4>
         <ul>
-          <li><a href="about.html" class="hover:underline">About Us</a></li>
-          <li><a href="recruitment-services.html" class="hover:underline">Recruitment Services</a></li>
-          <li><a href="staff-augmentation.html" class="hover:underline">Staff Augmentation</a></li>
-          <li><a href="contact.html" class="hover:underline">Contact</a></li>
+          <li><a href="about.html" class="hover:underline transition duration-300">About Us</a></li>
+          <li><a href="recruitment-services.html" class="hover:underline transition duration-300">Recruitment Services</a></li>
+          <li><a href="staff-augmentation.html" class="hover:underline transition duration-300">Staff Augmentation</a></li>
+          <li><a href="contact.html" class="hover:underline transition duration-300">Contact</a></li>
         </ul>
       </div>
       <div>
         <h4 class="font-semibold mb-2">Support</h4>
         <ul>
-          <li><a href="#" class="hover:underline">FAQ</a></li>
-          <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+          <li><a href="#" class="hover:underline transition duration-300">FAQ</a></li>
+          <li><a href="#" class="hover:underline transition duration-300">Privacy Policy</a></li>
         </ul>
       </div>
       <div>
         <h4 class="font-semibold mb-2">Contact</h4>
         <p>Aikinu LLC<br>16192 Coastal Highway<br>Lewes, DE 19958</p>
-        <p>Email: <a href="mailto:info@aikinu.com" class="text-orange-400 hover:underline">info@aikinu.com</a></p>
+        <p>Email: <a href="mailto:info@aikinu.com" class="text-orange-300 hover:underline transition duration-300">info@aikinu.com</a></p>
         <p>Phone: +1.646.494.8500</p>
       </div>
     </div>
   </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="fixed bottom-4 right-4 bg-orange-500 text-white p-2 rounded-full shadow hover:bg-orange-600 transition duration-300 hidden">
+    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
+
+  <!-- Simple JS for Mobile Menu and Back to Top -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('hidden');
+    });
+
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) backToTop.classList.remove('hidden');
+      else backToTop.classList.add('hidden');
+    });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
 </body>
 </html>

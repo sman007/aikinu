@@ -4,113 +4,146 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aikinu - Your Trusted Tech Recruitment Partner</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-white text-gray-800">
   <!-- Header -->
-  <header class="bg-white shadow">
+  <header class="bg-white shadow sticky top-0 z-50">
     <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between">
-      <div class="mb-4 md:mb-0 flex justify-center md:justify-start w-full md:w-auto">
+      <div class="flex items-center justify-between w-full md:w-auto">
         <a href="index.html">
-          <img src="images/ak2.png" alt="Aikinu Logo" class="h-20 md:h-24 bg-white p-2">
+          <img src="images/ak2.png" alt="Aikinu Logo" class="h-20 md:h-24 bg-white p-2" loading="lazy">
         </a>
+        <button id="menu-toggle" class="md:hidden text-blue-900 focus:outline-none">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
       </div>
-      <nav class="w-full md:w-auto text-center">
+      <nav id="nav-menu" class="hidden md:block w-full md:w-auto text-center mt-4 md:mt-0">
         <ul class="flex flex-col md:flex-row md:space-x-6 text-base font-semibold">
-          <li><a href="index.html" class="text-blue-900 hover:text-orange-500 py-2 inline-block">Home</a></li>
-          <li><a href="about.html" class="text-blue-900 hover:text-orange-500 py-2 inline-block">About Us</a></li>
+          <li><a href="index.html" class="text-blue-900 hover:text-orange-500 py-3 px-4 inline-block transition duration-300">Home</a></li>
+          <li><a href="about.html" class="text-blue-900 hover:text-orange-500 py-3 px-4 inline-block transition duration-300">About Us</a></li>
           <li class="relative group">
-            <a href="#" class="text-blue-900 hover:text-orange-500 py-2 inline-block">Services</a>
+            <span class="text-blue-900 py-3 px-4 inline-block">Services</span>
             <ul class="absolute hidden group-hover:block bg-white shadow mt-1 text-sm z-10 text-left">
-              <li><a href="recruitment-services.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Recruitment Services</a></li>
-              <li><a href="staff-augmentation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Staff Augmentation</a></li>
+              <li><a href="recruitment-services.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap transition duration-300">Recruitment Services</a></li>
+              <li><a href="staff-augmentation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap transition duration-300">Staff Augmentation</a></li>
             </ul>
           </li>
-          <li><a href="contact.html" class="text-blue-900 hover:text-orange-500 py-2 inline-block">Contact</a></li>
+          <li><a href="contact.html" class="text-blue-900 hover:text-orange-500 py-3 px-4 inline-block transition duration-300">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="bg-gray-50 py-16">
-    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
-      <div class="md:w-1/2 mb-10 md:mb-0">
-        <h1 class="text-3xl md:text-5xl font-bold text-blue-900 leading-tight">Your Trusted Partner in Tech Recruitment and Staff Augmentation</h1>
-        <p class="mt-4 text-gray-700 text-lg">Welcome to Aikinu, your trusted partner for technology recruitment and staff augmentation services. We are dedicated to connecting businesses with top-tier tech talent.</p>
-        <a href="contact.html" class="mt-6 inline-block bg-orange-500 text-white py-3 px-6 rounded shadow hover:bg-orange-600">Get Started</a>
+  <main>
+    <section class="bg-gradient-to-r from-gray-50 to-white py-16">
+      <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+        <div class="md:w-1/2 mb-10 md:mb-0">
+          <h1 class="text-4xl md:text-5xl font-bold text-blue-800 leading-tight">Your Trusted Partner in Tech Recruitment</h1>
+          <p class="mt-4 text-gray-700 text-lg">We connect businesses with top-tier tech talent across the Americas.</p>
+          <a href="contact.html" class="mt-6 inline-block bg-orange-500 text-white py-3 px-6 rounded shadow hover:bg-orange-600 transition duration-300">Get Started</a>
+        </div>
+        <div class="md:w-1/2">
+          <img src="images/image-1-1-1.png" alt="Team collaborating on tech recruitment" class="rounded-lg shadow" loading="lazy">
+        </div>
       </div>
-      <div class="md:w-1/2">
-        <img src="images/image-1-1-1.png" alt="Recruitment Meeting">
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About Preview Section -->
-  <section class="container mx-auto px-6 py-12">
-    <div class="flex flex-col md:flex-row items-center">
-      <div class="md:w-1/2">
-        <img src="images/snd-img.png" alt="Team Discussion">
+    <!-- About Preview Section -->
+    <section class="container mx-auto px-6 py-12">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2">
+          <img src="images/snd-img.png" alt="Aikinu team discussing recruitment strategies" class="rounded-lg shadow" loading="lazy">
+        </div>
+        <div class="md:w-1/2 md:pl-12 mt-8 md:mt-0">
+          <h2 class="text-2xl font-bold text-blue-800 mb-4">About Us</h2>
+          <p class="text-gray-700 mb-4">We’re dedicated to connecting businesses with exceptional tech talent, ensuring a perfect fit for both parties.</p>
+          <a href="about.html" class="text-orange-500 font-semibold hover:underline transition duration-300">Learn More</a>
+        </div>
       </div>
-      <div class="md:w-1/2 md:pl-12 mt-8 md:mt-0">
-        <h2 class="text-2xl font-bold text-blue-900 mb-4">About Us</h2>
-        <p class="text-gray-700 mb-4">Welcome to Aikinu, your trusted partner for technology recruitment and staff augmentation services. We are dedicated to connecting businesses with top-tier tech talent, ensuring a perfect fit for both parties.</p>
-        <a href="about.html" class="text-orange-500 font-semibold hover:underline">Learn More</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Services Highlights -->
-  <section class="bg-white py-12">
-    <div class="container mx-auto px-6 text-center">
-      <h3 class="text-2xl font-bold text-blue-900 mb-6">Why Choose Aikinu</h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
-          <img src="images/image-2-1.png" alt="Service 1" class="mx-auto mb-4">
-          <p class="font-semibold text-gray-700">Tailored Recruitment Solutions</p>
-        </div>
-        <div>
-          <img src="images/div.col-lg-6.png" alt="Service 2" class="mx-auto mb-4">
-          <p class="font-semibold text-gray-700">Northshoring Across the Americas</p>
-        </div>
-        <div>
-          <img src="images/image-1-1-1.png" alt="Service 3" class="mx-auto mb-4">
-          <p class="font-semibold text-gray-700">Unmatched Client Satisfaction</p>
+    <!-- Services Highlights -->
+    <section class="bg-white py-12">
+      <div class="container mx-auto px-6 text-center">
+        <h3 class="text-2xl font-bold text-blue-800 mb-6">Why Choose Aikinu</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <img src="images/image-2-1.png" alt="Tailored recruitment process illustration" class="mx-auto mb-4" loading="lazy">
+            <p class="font-semibold text-gray-700">Tailored Recruitment Solutions</p>
+            <p class="text-gray-600 text-sm mt-2">Custom strategies to fit your needs.</p>
+          </div>
+          <div>
+            <img src="images/div.col-lg-6.png" alt="Northshoring team collaboration" class="mx-auto mb-4" loading="lazy">
+            <p class="font-semibold text-gray-700">Northshoring Across the Americas</p>
+            <p class="text-gray-600 text-sm mt-2">Seamless talent from coast to coast.</p>
+          </div>
+          <div>
+            <img src="images/image-1-1-1.png" alt="Happy client shaking hands" class="mx-auto mb-4" loading="lazy">
+            <p class="font-semibold text-gray-700">Unmatched Client Satisfaction</p>
+            <p class="text-gray-600 text-sm mt-2">Your success is our priority.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer class="bg-gray-900 text-white py-10">
     <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-6 text-sm">
       <div>
-        <img src="images/ak2.png" alt="Aikinu Logo" class="h-10 mb-2 bg-white p-1">
+        <img src="images/ak2.png" alt="Aikinu Logo" class="h-10 mb-2 bg-white p-1" loading="lazy">
         <p>Revolutionizing Tech Talent: Aikinu Leads, The Industry Follows.</p>
       </div>
       <div>
         <h4 class="font-semibold mb-2">Company</h4>
         <ul>
-          <li><a href="about.html" class="hover:underline">About Us</a></li>
-          <li><a href="recruitment-services.html" class="hover:underline">Recruitment Services</a></li>
-          <li><a href="staff-augmentation.html" class="hover:underline">Staff Augmentation</a></li>
-          <li><a href="contact.html" class="hover:underline">Contact</a></li>
+          <li><a href="about.html" class="hover:underline transition duration-300">About Us</a></li>
+          <li><a href="recruitment-services.html" class="hover:underline transition duration-300">Recruitment Services</a></li>
+          <li><a href="staff-augmentation.html" class="hover:underline transition duration-300">Staff Augmentation</a></li>
+          <li><a href="contact.html" class="hover:underline transition duration-300">Contact</a></li>
         </ul>
       </div>
       <div>
         <h4 class="font-semibold mb-2">Support</h4>
         <ul>
-          <li><a href="#" class="hover:underline">FAQ</a></li>
-          <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+          <li><a href="#" class="hover:underline transition duration-300">FAQ</a></li>
+          <li><a href="#" class="hover:underline transition duration-300">Privacy Policy</a></li>
         </ul>
       </div>
       <div>
         <h4 class="font-semibold mb-2">Contact</h4>
         <p>Aikinu LLC<br>16192 Coastal Highway<br>Lewes, DE 19958</p>
-        <p>Email: <a href="mailto:info@aikinu.com" class="text-orange-400 hover:underline">info@aikinu.com</a></p>
+        <p>Email: <a href="mailto:info@aikinu.com" class="text-orange-300 hover:underline transition duration-300">info@aikinu.com</a></p>
         <p>Phone: +1.646.494.8500</p>
       </div>
     </div>
   </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="fixed bottom-4 right-4 bg-orange-500 text-white p-2 rounded-full shadow hover:bg-orange-600 transition duration-300 hidden">
+    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
+
+  <!-- Simple JS for Mobile Menu and Back to Top -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('hidden');
+    });
+
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) backToTop.classList.remove('hidden');
+      else backToTop.classList.add('hidden');
+    });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
 </body>
 </html>
